@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AG8 Links Hub</title>
+    
+    <style>
+        /* Base Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background: #070a13;
+            color: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        /* Profile Layout */
+        .profile {
+            margin-bottom: 40px;
+        }
+
+        .avatar {
+            font-size: 3rem;
+            background: #111827;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+        }
+
+        .profile h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+        .profile p {
+            color: #64748b;
+            font-size: 1rem;
+        }
+
+        /* The Core Stack */
+        .links-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        /* DYNAMIC UNIFIED GRADIENT BUTTONS */
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 28px;
+            border-radius: 16px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+            border: none;
+            
+            /* Unified Color Spectrum (Violet -> Purple -> Cyan -> Blue) */
+            background: linear-gradient(-45deg, #7f00ff, #ff007f, #00f2fe, #3a86ff);
+            background-size: 400% 400%;
+            
+            /* Liquid Movement Animation Logic */
+            animation: moveGradient 8s ease infinite;
+            
+            /* Visual enhancements for depth and readability */
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s;
+        }
+
+        /* Hover Bounce */
+        .link-btn:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Layout Alignment Helpers */
+        .link-btn-content {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .link-icon {
+            font-size: 1.5rem;
+        }
+
+        .arrow-icon {
+            font-size: 1.1rem;
+            transition: transform 0.2s ease;
+            opacity: 0.9;
+        }
+
+        .link-btn:hover .arrow-icon {
+            transform: translateX(6px);
+        }
+
+        /* Core Animation Keyframes */
+        @keyframes moveGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Footer */
+        footer {
+            font-size: 0.95rem;
+            color: #475569;
+        }
+
+        footer a {
+            color: #f8fafc;
+            text-decoration: none;
+            font-weight: 600;
+            margin-left: 4px;
+            border-bottom: 1px dashed #475569;
+            transition: color 0.2s, border-bottom 0.2s;
+        }
+
+        footer a:hover {
+            color: #00f2fe;
+            border-bottom-color: #00f2fe;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Profile Section -->
+        <header class="profile">
+            <div class="avatar">🌐</div> 
+            <h1>AG8 Website Hub</h1>
+            <p>Click any button below to visit my live projects.</p>
+        </header>
+
+        <!-- Links Container -->
+        <main id="links-container" class="links-list">
+
+            <!-- BUTTON 1: DART Browser -->
+            <a href="https://aviaddons.github.io/DART" target="_blank" class="link-btn">
+                <div class="link-btn-content">
+                    <span class="link-icon">🚀</span>
+                    <span class="link-title">DART browser</span>
+                </div>
+                <span class="arrow-icon">➔</span>
+            </a>
+
+            <!-- BUTTON 2: Hill Run -->
+            <a href="https://aviaddons.github.io/Hill-Run/" target="_blank" class="link-btn">
+                <div class="link-btn-content">
+                    <span class="link-icon">🚗</span>
+                    <span class="link-title">Hill Run</span>
+                </div>
+                <span class="arrow-icon">➔</span>
+            </a>
+
+            <!-- Paste more buttons right below this line -->
+
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>Created by <a href="https://github.com/AviAddons" target="_blank">Avinab</a></p>
+        </footer>
+    </div>
+
+</body>
+</html>
